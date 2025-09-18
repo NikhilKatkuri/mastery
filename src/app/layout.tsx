@@ -1,10 +1,10 @@
-import { Nunito } from "next/font/google";
+import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import { baseMetadata, viewPort } from "@/lib/baseMetaData";
 
-const nunito = Nunito({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-nunito",
+  variable: "--font-inter",
   display: "swap",
 });
 
@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${nunito.className} ${nunito.variable} scrollbar-hide text-foreground  h-screen antialiased`}
+        className={` ${inter.className} ${inter.variable} scrollbar-hide text-foreground  h-screen antialiased`}
       >
         {children}
       </body>

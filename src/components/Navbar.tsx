@@ -3,8 +3,8 @@ import React from "react";
 
 function Navbar() {
   return (
-    <header className="py-2 px-4 text-foreground  sticky top-0 flex items-centerbg-navbar-bg border-b-1 border-border-02 justify-between w-full">
-      <div className="w-full max-w-[1024px] mx-auto  flex items-center  ">
+    <header className="py-2.5 h-14 px-6 text-foreground backdrop-blur-3xl  sticky top-0 flex items-center z-30 bg-navbar-bg border-b-1 border-border-02 justify-between w-full">
+      <div className="w-full max-w-5xl mx-auto  flex items-center  justify-between">
         <div className="flex items-center gap-3 ">
           <Link
             href="/"
@@ -15,7 +15,6 @@ function Navbar() {
             </p>
           </Link>
         </div>
-      </div>
       <div className="flex items-center gap-3 md:hidden">
         <button className="transition-medium hover:bg-level-02 p-2 rounded-full active:scale-95">
           <svg
@@ -26,6 +25,7 @@ function Navbar() {
             stroke="currentColor"
             className="size-6"
           >
+            
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -33,6 +33,7 @@ function Navbar() {
             />
           </svg>
         </button>
+      </div>
       </div>
     </header>
   );
