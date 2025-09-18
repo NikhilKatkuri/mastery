@@ -48,7 +48,54 @@
   --font-nunito: 'Nunito', system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
-
+@theme inline{
+  --color-background: #090b0c;
+  --color-foreground: #808080;
+  --color-primary-foreground: #f7f8f8;
+  --color-secondary-foreground: #808080;
+  --color-tertiary-foreground: #6c6d6e;
+  --color-navbar-bg: #0a0a0acc;
+  --color-navbar-border: #ffffff14;
+  --color-primary: #5e6ad2;
+  --color-primary-text: #828fff;
+  --color-secondary: #e6e6e6;
+  --color-secondary-text: #000;
+  --color-level-01: #0f1011;
+  --color-level-02: #141516;
+  --color-level-03: #151617;
+  --color-level-04: #191a1b;
+  --color-border-01: var(--level-01);
+  --color-border-02: var(--level-02);
+  --color-border-03: var(--level-03);
+  --color-border-04: var(--level-04);
+  --color-acent-green: #25b544;
+  --color-accent-red: #ff4c4c;
+  --color-accent-yellow: #ffcc00;
+  --color-accent-blue: #0095ff;
+  --color-accent-purple: #b400ff;
+  --color-accent-pink: #ff6ac1;
+  --color-accent-orange: #ff7b00;
+  --color-accent-cyan: #00d4ff;
+  --color-accent-teal: #00ffcc;
+  --color-accent-lime: #a1ff00;
+  --color-accent-magenta: #ff00ff;
+  --color-accent-rose: #ff007f;
+  --color-accent-indigo: #7f00ff;
+  --color-accent-violet: #7f00ff;
+  --color-accent-amber: #ffbf00;
+  --color-accent-sapphire: #0055ff;
+  --color-accent-emerald: #00ff7f;
+  --color-accent-gold: #ffd700;
+  --color-accent-silver: #c0c0c0;
+  --color-accent-bronze: #cd7f32;
+  --color-accent-coral: #ff7f50;
+  --color-accent-teal-blue: #008080;
+  --color-accent-mint: #3eb489;
+  --color-accent-olive: #808000;
+  --font-nunito: 'Nunito', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+ 
 body {
   background: var(--background);
   color: var(--tertiary-text);
@@ -76,4 +123,28 @@ button {
   .transition-slow {
     @apply transition-all duration-500 ease-in-out;
   }
+}
+
+.three-d {
+  transform:translateX(2%) scale(1.2) rotateX(47deg) rotateY(31deg) rotate(324deg)
+    ; 
+
+  transform-origin:20% 10% ;
+  overflow: hidden;
+
+}
+
+@media screen and (max-width: 768px) {
+  .three-d {
+     transform:translateX(2%) scale(1.2) rotateX(47deg) rotateY(31deg) rotate(324deg)
+     ;
+  transform-origin:20% -110% ;
+  overflow: hidden;
+  }
+  
+}
+.three-d .mask {
+  background: url(/image.png) top left no-repeat;
+  background-size: cover;
+  opacity: 0.3;
 }

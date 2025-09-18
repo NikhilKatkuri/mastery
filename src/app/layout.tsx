@@ -18,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` ${nunito.className} ${nunito.variable}  antialiased`}>
+      <body
+        className={` ${nunito.className} ${nunito.variable} scrollbar-hide text-foreground  h-screen antialiased`}
+      >
         {children}
       </body>
     </html>
