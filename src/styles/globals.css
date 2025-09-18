@@ -1,15 +1,76 @@
-@import "tailwindcss";
+@import "tailwindcss"; 
 
 /* colors */
 :root {
-  --background: #07090a;
+  --background: #090b0c;
   --foreground: #808080;
+  --primary-foreground: #f7f8f8;
+  --secondary-foreground: #808080;
+  --tertiary-foreground: #6c6d6e;
   --navbar-bg: #0a0a0acc;
   --navbar-border: #ffffff14;
-  --primary-text: #f7f8f8;
+  --primary: #5e6ad2;
+  --primary-text: #828fff;
+  --secondary: #e6e6e6;
+  --secondary-text: #000;
+  --level-01: #0f1011;
+  --level-02: #141516;
+  --level-03: #151617;
+  --level-04: #191a1b;
+  --border-01: var(--level-01);
+  --border-02: var(--level-02);
+  --border-03: var(--level-03);
+  --border-04: var(--level-04);
+  --acent-green: #25b544;
+  --accent-red: #ff4c4c;
+  --accent-yellow: #ffcc00;
+  --accent-blue: #0095ff;
+  --accent-purple: #b400ff;
+  --accent-pink: #ff6ac1;
+  --accent-orange: #ff7b00;
+  --accent-cyan: #00d4ff;
+  --accent-teal: #00ffcc;
+  --accent-lime: #a1ff00;
+  --accent-magenta: #ff00ff;
+  --accent-rose: #ff007f;
+  --accent-indigo: #7f00ff;
+  --accent-violet: #7f00ff;
+  --accent-amber: #ffbf00;
+  --accent-sapphire: #0055ff;
+  --accent-emerald: #00ff7f;
+  --accent-gold: #ffd700;
+  --accent-silver: #c0c0c0;
+  --accent-bronze: #cd7f32;
+  --accent-coral: #ff7f50;
+  --accent-teal-blue: #008080;
+  --accent-mint: #3eb489;
+  --accent-olive: #808000;
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: var(--tertiary-text);
+}
+
+button {
+  cursor: pointer;
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+  }
+  .transition-fast {
+    @apply transition-all duration-150 ease-in-out;
+  }
+  .transition-medium {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  .transition-slow {
+    @apply transition-all duration-500 ease-in-out;
+  }
 }
