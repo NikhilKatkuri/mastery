@@ -1,6 +1,6 @@
 import { Nunito } from "next/font/google";
 import "@/styles/globals.css";
-import baseMetaData from "@/lib/baseMetaData";
+import { baseMetadata, viewPort } from "@/lib/baseMetaData";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -8,7 +8,8 @@ const nunito = Nunito({
   display: "swap",
 });
 
-export const metadata = baseMetaData;
+export const metadata = baseMetadata;
+export const viewport = viewPort;
 
 export default function RootLayout({
   children,

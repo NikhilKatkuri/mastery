@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 const baseMetadata: Metadata = {
   title: "Mastery",
@@ -17,7 +17,10 @@ const baseMetadata: Metadata = {
   creator: "NIKHIL KATKURI",
   publisher: "Mastery",
   metadataBase: new URL("https://mastery.com"),
+};
+
+const viewPort: Viewport = {
   themeColor: "#090b0c",
 };
 
-export default baseMetadata;
+export  { baseMetadata, viewPort } ;
