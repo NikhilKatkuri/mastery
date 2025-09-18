@@ -136,24 +136,24 @@ button {
 
 @media screen and (max-width: 1024px) {
   .three-d {
-    transform: translateX(25%) translateY(12%) scale(1.2) rotateX(47deg) rotateY(31deg)
-      rotate(324deg);
+    transform: translateX(25%) translateY(12%) scale(1.2) rotateX(47deg)
+      rotateY(31deg) rotate(324deg);
     /* transform-origin: 60% -50%; */
     overflow: hidden;
   }
 }
 @media screen and (max-width: 768px) {
   .three-d {
-    transform: translateX(0%) translateY(12%) scale(1.2) rotateX(47deg) rotateY(31deg)
-      rotate(324deg);
+    transform: translateX(0%) translateY(12%) scale(1.2) rotateX(47deg)
+      rotateY(31deg) rotate(324deg);
     /* transform-origin: 60% -50%; */
     overflow: hidden;
   }
 }
 @media screen and (max-width: 600px) {
   .three-d {
-    transform: translateX(-2%) translateY(18%) scale(1.2) rotateX(47deg) rotateY(31deg)
-      rotate(324deg);
+    transform: translateX(-2%) translateY(18%) scale(1.2) rotateX(47deg)
+      rotateY(31deg) rotate(324deg);
     /* transform-origin: 60% -50%; */
     overflow: hidden;
   }
@@ -164,9 +164,8 @@ button {
   opacity: 0.3;
 }
 
- 
 .heading-animation {
-  display: inline-block; 
+  display: inline-block;
   transform: translateY(0%);
   opacity: 0;
   animation: headingScale 0.6s cubic-bezier(0.4, 0.8, 0.2, 1) forwards;
@@ -187,4 +186,3 @@ button {
     opacity: 1;
   }
 }
- 

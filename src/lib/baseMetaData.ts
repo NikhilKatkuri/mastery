@@ -23,4 +23,4 @@ const viewPort: Viewport = {
   themeColor: "#090b0c",
 };
 
-export  { baseMetadata, viewPort } ;
+export { baseMetadata, viewPort };
