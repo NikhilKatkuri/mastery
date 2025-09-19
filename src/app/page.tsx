@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Hero from "@/components/Hero";
 import LearningSection from "@/components/Learingsection";
 import Navbar from "@/components/Navbar";
@@ -111,6 +112,7 @@ export default function Home() {
         </div>
       </section>
       <LearningSection />
+      <Footer />
     </div>
   );
 }
