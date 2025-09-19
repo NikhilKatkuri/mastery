@@ -136,7 +136,7 @@ button {
 
 @media screen and (max-width: 1024px) {
   .three-d {
-    transform: translateX(25%) translateY(12%) scale(1.2) rotateX(47deg)
+    transform: translateX(-5%) translateY(12%) scale(1.5) rotateX(47deg)
       rotateY(31deg) rotate(324deg);
     /* transform-origin: 60% -50%; */
     overflow: hidden;
@@ -144,7 +144,7 @@ button {
 }
 @media screen and (max-width: 768px) {
   .three-d {
-    transform: translateX(0%) translateY(12%) scale(1.2) rotateX(47deg)
+    transform: translateX(-20%) translateY(12%) scale(1.2) rotateX(47deg)
       rotateY(31deg) rotate(324deg);
     /* transform-origin: 60% -50%; */
     overflow: hidden;
@@ -152,7 +152,7 @@ button {
 }
 @media screen and (max-width: 600px) {
   .three-d {
-    transform: translateX(-20%) translateY(18%) scale(1.2) rotateX(47deg)
+    transform: translateX(-20%) translateY(10%) scale(0.8) rotateX(47deg)
       rotateY(31deg) rotate(324deg);
     /* transform-origin: 60% -50%; */
     overflow: hidden;

@@ -23,6 +23,21 @@ export default function Home() {
       <Navbar />
       <Hero />
       <section className="text-tertiary-foreground my-3 mb-12 grid h-auto w-full items-center justify-center px-4">
+        <div className="my-12 flex min-w-full items-center justify-center px-4">
+          <div className="mx-auto flex h-auto w-full max-w-xl flex-col items-center md:text-center">
+            <p className="text-primary-foreground text-2xl leading-tight font-semibold tracking-tight">
+              Powering the next generation of coders
+            </p>
+            <p className="text-foreground/70 mt-3 max-w-lg text-center text-sm md:text-base">
+              From curious beginners to skilled pros explore, learn, and build
+              in{" "}
+              <span className="text-primary-foreground/90">
+                5+ programming languages
+              </span>
+              .
+            </p>
+          </div>
+        </div>
         <div className="mx-auto grid h-full w-full max-w-6xl grid-cols-1 items-center justify-center md:max-h-[500px] md:grid-cols-2">
           <div className="md:border-level-03/80 h-full w-full sm:p-3 md:border-t md:border-r">
             <div className="flex flex-col items-start md:justify-center">
