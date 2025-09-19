@@ -93,8 +93,8 @@ function Hero() {
               </button>
             </div>
           </div>
-          <div className="flex min-w-full items-center justify-center">
-            <div className="mx-auto flex h-auto w-full max-w-xl flex-col items-center text-center">
+          <div className="flex min-w-full items-center justify-center px-4">
+            <div className="mx-auto flex h-auto w-full max-w-xl flex-col items-center md:text-center">
               <p className="text-primary-foreground text-2xl leading-tight font-semibold tracking-tight">
                 Powering the next generation of coders
               </p>

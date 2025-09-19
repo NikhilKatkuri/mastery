@@ -152,7 +152,7 @@ button {
 }
 @media screen and (max-width: 600px) {
   .three-d {
-    transform: translateX(-2%) translateY(18%) scale(1.2) rotateX(47deg)
+    transform: translateX(-20%) translateY(18%) scale(1.2) rotateX(47deg)
       rotateY(31deg) rotate(324deg);
     /* transform-origin: 60% -50%; */
     overflow: hidden;
