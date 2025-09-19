@@ -23,8 +23,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <section className="text-tertiary-foreground my-3 mb-12 grid h-auto w-full items-center justify-center px-4">
-        <div className="mx-auto grid h-full w-full max-w-6xl items-center justify-center md:max-h-[500px] md:grid-cols-2">
-          <div className="md:border-level-03/80 h-full w-full p-3 md:border-t md:border-r">
+        <div className="mx-auto grid h-full w-full max-w-6xl grid-cols-1 items-center justify-center md:max-h-[500px] md:grid-cols-2">
+          <div className="md:border-level-03/80 h-full w-full sm:p-3 md:border-t md:border-r">
             <div className="flex flex-col items-start md:justify-center">
               <h1 className="text-primary-foreground max-w-2xl text-4xl leading-tight font-bold">
                 Solve Any Problem , One Step at a Time
@@ -36,32 +36,32 @@ export default function Home() {
                 </p>
                 <div className="flex items-center gap-3">
                   <div className="bg-accent-lime h-6 w-1 rounded-md"></div>
-                  <p className="flex items-center">
+                  <p className="flex flex-wrap items-center">
                     {" "}
-                    <strong>Break it Down -</strong>{" "}
+                    <span>Break it Down -</span>{" "}
                     <span className="ml-1">Solve small chunks first.</span>
                   </p>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="bg-level-04 h-6 w-1 rounded-md"></div>
-                  <p className="flex items-center">
+                  <div className="bg-level-04 h-6 min-w-1 rounded-md"></div>
+                  <p className="flex flex-wrap items-center">
                     {" "}
-                    <strong>Understand Before You Write - </strong>
+                    <span>Understand Before You Write - </span>
                     <span className="ml-1">Think through logic clearly.</span>
                   </p>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="bg-level-04 h-6 w-1 rounded-md"></div>
-                  <p className="flex items-center">
+                  <div className="bg-level-04 h-6 min-w-1 rounded-md"></div>
+                  <p className="flex flex-wrap items-center">
                     {" "}
-                    <strong>Iterate & Debug - </strong>
+                    <span>Iterate & Debug - </span>
                     <span className="ml-1">Errors guide you to success.</span>
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="md:border-level-03/80 h-auto w-full p-3 max-md:max-w-[560px] md:border-t md:border-l">
+          <div className="md:border-level-03/80 h-auto w-full sm:p-3 md:border-t md:border-l">
             <div className="border-level-03 relative h-full w-full rounded-xl border-1">
               <div className="border-level-03 flex h-8 w-full items-center gap-2 border-b px-3 py-2 text-sm">
                 <button className="transition-medium flex cursor-pointer items-center gap-3 opacity-80 hover:opacity-100">
