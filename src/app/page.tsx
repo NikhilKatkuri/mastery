@@ -1,8 +1,8 @@
 import Hero from "@/components/Hero";
+import LearningSection from "@/components/Learingsection";
 import Navbar from "@/components/Navbar";
 
 export default function Home() {
-  console.log();
   const code: string = `<span class="text-green-700">// Great things start small 🌱</span>
 <span class="text-blue-900">const</span> <span class="text-blue-700">dream</span> = <span class="text-orange-500">"Build something meaningful"</span>;
 
@@ -21,7 +21,7 @@ export default function Home() {
     <div className="font-inter scrollbar-hide h-screen w-full gap-3 overflow-scroll scroll-smooth">
       <Navbar />
       <Hero />
-      <section className="text-tertiary-foreground my-3 grid h-auto w-full items-center justify-center">
+      <section className="text-tertiary-foreground my-3 mb-12 grid h-auto w-full items-center justify-center px-4">
         <div className="mx-auto grid h-full w-full max-w-6xl items-center justify-center md:max-h-[500px] md:grid-cols-2">
           <div className="md:border-level-03/80 h-full w-full p-3 md:border-t md:border-r">
             <div className="flex flex-col items-start md:justify-center">
@@ -110,6 +110,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <LearningSection />
     </div>
   );
 }

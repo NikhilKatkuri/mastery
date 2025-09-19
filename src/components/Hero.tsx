@@ -98,7 +98,7 @@ function Hero() {
               <p className="text-primary-foreground text-2xl leading-tight font-semibold tracking-tight">
                 Powering the next generation of coders
               </p>
-              <p className="text-foreground/70 mt-3 max-w-lg text-sm md:text-base">
+              <p className="text-foreground/70 mt-3 max-w-lg text-center text-sm md:text-base">
                 From curious beginners to skilled pros explore, learn, and build
                 in{" "}
                 <span className="text-primary-foreground/90">

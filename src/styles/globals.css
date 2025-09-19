@@ -186,3 +186,50 @@ button {
     opacity: 1;
   }
 }
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 40s linear infinite;
+  display: flex;
+  white-space: nowrap;
+}
+
+.animate-scroll-right {
+  animation: scroll-right 40s linear infinite;
+  display: flex;
+  white-space: nowrap;
+}
+
+.scrolling-row {
+  mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20px,
+    white calc(100% - 20px),
+    transparent
+  );
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20px,
+    white calc(100% - 20px),
+    transparent
+  );
+}
