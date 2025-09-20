@@ -48,7 +48,12 @@ function Navbar() {
         </div>
         <div className="flex items-center gap-1">
           {" "}
-          <button className="hover:bg-level-04 text-primary-foreground/30 transition-medium mr-1 h-7 rounded-md px-3 text-sm font-medium">
+          <button
+            onClick={() => {
+              router.push("/auth/signup");
+            }}
+            className="hover:bg-level-04 text-primary-foreground/30 transition-medium mr-1 h-7 rounded-md px-3 text-sm font-medium"
+          >
             Sign up
           </button>
           <button
