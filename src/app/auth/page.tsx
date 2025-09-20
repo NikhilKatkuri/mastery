@@ -7,7 +7,7 @@ import InputField from "@/components/common/InputFeild";
 
 function AuthPage() {
   const [formData, setFormData] = useState({
-    email: "",
+    emailAddress: "",
     password: "",
   });
 
@@ -50,9 +50,9 @@ function AuthPage() {
           <form onSubmit={handleSubmit} className="w-full space-y-4">
             <InputField
               type="email"
-              name="email-address"
-              id="email-address"
-              value={formData.email}
+              name="emailAddress"
+              id="emailAddress"
+              value={formData.emailAddress}
               onChange={handleInputChange}
               label="Email Address"
               required

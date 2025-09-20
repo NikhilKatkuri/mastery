@@ -5,7 +5,7 @@ interface ColorButtonProps
   props?: React.ButtonHTMLAttributes<HTMLButtonElement>;
 }
 
-const ColorButton: React.FC<ColorButtonProps> = ({ title, props }) => {
+const ColorButton: React.FC<ColorButtonProps> = ({ title, ...props }) => {
   return (
     <button
       {...props}

@@ -5,7 +5,32 @@ import Link from "next/link";
 import React, { useState } from "react";
 
 const SignUpScreen = () => {
-  const [isemail, setisEmail] = useState<boolean>(false);
+  const [isEmail, setIsEmail] = useState<boolean>(false);
+  const [isProfile, setIsProfile] = useState<boolean>(false);
+  const [formData, setFormData] = useState({
+    emailAddress: "",
+    password: "",
+    confirmPassword: "",
+  });
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (formData.emailAddress.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+      setIsEmail(true);
+    }
+
+    setIsProfile(
+      formData.password === formData.confirmPassword &&
+        formData.password.length >= 6
+    );
+    console.log("Form submitted:", formData);
+  };
   return (
     <div className="font-inter text-foreground relative flex h-screen w-screen items-center justify-center">
       <div className="absolute h-screen w-screen bg-[url('/image-gallery/view-ancient-roman-empire-architecture.png')] bg-cover bg-center opacity-10"></div>
@@ -19,19 +44,45 @@ const SignUpScreen = () => {
             community
           </p>
         </div>
-        <div className="flex w-full max-w-80 flex-col items-center">
+        <div className="flex w-full max-w-80 flex-col items-center gap-2">
           <InputField
             type="email"
-            name="email-address"
-            id="email-address"
+            name="emailAddress"
+            id="emailAddress"
             required
+            value={formData.emailAddress}
+            onChange={handleInputChange}
             label="Email Address"
             placeholder="Enter your email"
           />
-          <ColorButton title="Continue" />
+          {isEmail && (
+            <>
+              <InputField
+                type="password"
+                name="password"
+                id="password"
+                required
+                value={formData.password}
+                onChange={handleInputChange}
+                label="Password"
+                placeholder="Enter your password"
+              />
+              <InputField
+                type="password"
+                name="confirmPassword"
+                id="confirmPassword"
+                required
+                value={formData.confirmPassword}
+                onChange={handleInputChange}
+                label="Confirm Password"
+                placeholder="Confirm your password"
+              />
+            </>
+          )}
+          <ColorButton title="Continue" onClick={handleSubmit} />
           <p className="hidden py-2 text-xs opacity-0">message</p>
         </div>
-        {!isemail && (
+        {!isEmail && (
           <>
             <div className="mt-4 mb-6 flex w-full max-w-80 items-center">
               <div className="bg-foreground/40 h-px flex-1"></div>
