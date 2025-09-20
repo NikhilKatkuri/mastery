@@ -1,10 +1,11 @@
 "use client";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 
 function Navbar() {
   const router = useRouter();
+  const pn = usePathname();
   return (
     <header className="text-foreground bg-navbar-bg border-border-02 sticky top-0 z-30 flex h-16 w-full items-center justify-between border-b-1 px-6 backdrop-blur-3xl">
       <div className="mx-auto flex w-full max-w-5xl items-center justify-between">
@@ -20,30 +21,18 @@ function Navbar() {
         </div>
         <div className="hidden h-full md:flex md:items-center md:gap-4">
           <div className="flex items-center gap-4 text-sm font-normal">
-            <Link
-              href="/"
-              className="text-foreground/60 hover:text-primary-foreground transition-medium hover:bg-level-02 rounded-md px-3 py-1.5"
-            >
-              Learn
-            </Link>
-            <Link
-              href="/"
-              className="text-foreground/60 hover:text-primary-foreground transition-medium hover:bg-level-02 rounded-md px-3 py-1.5"
-            >
-              Practice
-            </Link>
-            <Link
-              href="/"
-              className="text-foreground/60 hover:text-primary-foreground transition-medium hover:bg-level-02 rounded-md px-3 py-1.5"
-            >
-              Games
-            </Link>
-            <Link
-              href="/"
-              className="text-foreground/60 hover:text-primary-foreground transition-medium hover:bg-level-02 rounded-md px-3 py-1.5"
-            >
-              Resources
-            </Link>
+            {["learn", "practice", "games", "resources"].map((item, index) => {
+              return (
+                <Link
+                  key={index}
+                  href={`/${item}`}
+                  prefetch={false}
+                  className={`transition-medium ${pn.startsWith(`/${item}`) ? "bg-level-02 text-primary-foreground" : "hover:bg-level-02 text-foreground/60 hover:text-primary-foreground"} rounded-md px-3 py-1.5`}
+                >
+                  {item.charAt(0).toUpperCase() + item.slice(1)}
+                </Link>
+              );
+            })}
           </div>
         </div>
         <div className="flex items-center gap-1">

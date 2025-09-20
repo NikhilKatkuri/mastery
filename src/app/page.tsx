@@ -24,7 +24,7 @@ export default function Home() {
       <Hero />
       <section className="text-tertiary-foreground my-3 mb-12 grid h-auto w-full items-center justify-center px-4">
         <div className="my-12 flex min-w-full items-center justify-center px-4">
-          <div className="mx-auto flex h-auto w-full max-w-xl flex-col items-center md:text-center">
+          <div className="mx-auto flex h-auto w-full max-w-xl flex-col items-center text-center">
             <p className="text-primary-foreground text-2xl leading-tight font-semibold tracking-tight">
               Powering the next generation of coders
             </p>
