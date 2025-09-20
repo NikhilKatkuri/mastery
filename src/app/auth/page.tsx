@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import ColorButton from "@/components/common/colorButton";
+import InputField from "@/components/common/InputFeild";
 
 function AuthPage() {
   const [formData, setFormData] = useState({
@@ -26,11 +28,11 @@ function AuthPage() {
       <div className="z-10 mx-auto flex h-full w-full items-center gap-4">
         {/* Background Image */}
         <div className="hidden h-full w-full overflow-hidden rounded-xl md:block">
-          <div className="top-0 left-0 h-full w-full bg-[url('/image-gallery/aesthetic-anime-character-gaming.png')] bg-cover bg-center bg-no-repeat "></div>
+          <div className="top-0 left-0 h-full w-full bg-[url('/image-gallery/aesthetic-anime-character-gaming.png')] bg-cover bg-center bg-no-repeat"></div>
         </div>
 
         {/* Auth Form */}
-        <div className="bg-level-01/90 border-level-04 mx-auto flex h-full w-full max-w-[450px] flex-col items-center justify-center rounded-2xl border-2 p-4 md:p-8 shadow-2xl backdrop-blur-md max-md:h-auto max-md:min-h-[500px]">
+        <div className="bg-level-01/90 border-level-04 mx-auto flex h-full w-full max-w-[450px] flex-col items-center justify-center rounded-2xl border-2 p-4 shadow-2xl backdrop-blur-md max-md:h-auto max-md:min-h-[500px] md:p-8">
           {/* Header */}
           <div className="mb-8 flex flex-col gap-6 text-center">
             <Link
@@ -46,49 +48,36 @@ function AuthPage() {
 
           {/* Form */}
           <form onSubmit={handleSubmit} className="w-full space-y-4">
-            <div>
-              <label className="text-secondary-foreground mb-2 block text-sm font-medium">
-                Email Address
-              </label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                required
-                className="bg-level-02 border-border-03 text-primary-foreground placeholder-tertiary-foreground focus:ring-primary w-full rounded-lg border px-4 py-3 transition-all focus:border-transparent focus:ring-2 focus:outline-none"
-                placeholder="Enter your email"
-              />
-            </div>
+            <InputField
+              type="email"
+              name="email-address"
+              id="email-address"
+              value={formData.email}
+              onChange={handleInputChange}
+              label="Email Address"
+              required
+              placeholder="Enter your email"
+            />
 
-            <div>
-              <label className="text-secondary-foreground mb-2 block text-sm font-medium">
-                Password
-              </label>
-              <input
-                type="password"
-                name="password"
-                value={formData.password}
-                onChange={handleInputChange}
-                required
-                className="bg-level-02 border-border-03 text-primary-foreground placeholder-tertiary-foreground focus:ring-primary w-full rounded-lg border px-4 py-3 transition-all focus:border-transparent focus:ring-2 focus:outline-none"
-                placeholder="Enter your password"
-              />
-            </div>
+            <InputField
+              type="password"
+              name="password"
+              id="password"
+              label="Password"
+              value={formData.password}
+              onChange={handleInputChange}
+              required
+              placeholder="Enter your password"
+            />
 
-            <button
-              type="submit"
-              className="bg-primary hover:bg-primary/90 mt-6 w-full rounded-lg px-4 py-3 font-medium text-white transition-all duration-200 hover:shadow-lg active:scale-[0.98]"
-            >
-              Sign In
-            </button>
+            <ColorButton title="Sign In" type="submit" />
           </form>
-            <button
-              type="button"
-              className="text-primary hover:text-primary-text text-sm transition-colors text-center mt-4"
-            >
-              Forgot password?
-            </button>
+          <button
+            type="button"
+            className="text-primary hover:text-primary-text mt-4 text-center text-sm transition-colors"
+          >
+            Forgot password?
+          </button>
 
           {/* Divider */}
           <div className="my-6 flex w-full items-center">
