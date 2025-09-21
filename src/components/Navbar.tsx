@@ -8,7 +8,9 @@ function Navbar() {
   const pn = usePathname();
   return (
     <header className="text-foreground bg-navbar-bg border-border-02 sticky top-0 z-30 flex h-16 w-full items-center justify-between border-b-1 px-6 backdrop-blur-3xl">
-      <div className="mx-auto flex w-full max-w-5xl items-center justify-between">
+      <div
+        className={`mx-auto flex w-full ${pn === "/" && "max-w-5xl"} items-center justify-between`}
+      >
         <div className="flex items-center gap-3">
           <Link
             href="/"
@@ -27,7 +29,7 @@ function Navbar() {
                   key={index}
                   href={`/${item}`}
                   prefetch={false}
-                  className={`transition-medium ${pn.startsWith(`/${item}`) ? "bg-level-02 text-primary-foreground" : "hover:bg-level-02 text-foreground/60 hover:text-primary-foreground"} rounded-md px-3 py-1.5`}
+                  className={`transition-medium ${pn.startsWith(`/${item}`) ? "bg-foreground/20 text-primary-foreground" : "hover:bg-level-02 text-foreground/60 hover:text-primary-foreground"} rounded-md px-3 py-1.5`}
                 >
                   {item.charAt(0).toUpperCase() + item.slice(1)}
                 </Link>

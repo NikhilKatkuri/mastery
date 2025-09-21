@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${inter.className} ${inter.variable} scrollbar-hide text-foreground h-screen antialiased`}
+        className={` ${inter.className} ${inter.variable} text-foreground scrollbar-hide h-screen  antialiased`}
       >
         {children}
       </body>

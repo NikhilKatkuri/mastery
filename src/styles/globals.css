@@ -116,6 +116,9 @@ button {
   .scrollbar-hide::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera*/
   }
+  .scrollbar-hide::-webkit-scrollbar-track {
+    display: none; /* Chrome, Safari, Opera*/
+  } 
   .transition-fast {
     @apply transition-all duration-150 ease-in-out;
   }
